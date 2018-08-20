@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP, modified by Blaze
+        html5up.net | @ajlkn
+        Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>#2 18/August/20/Article/Programming/Basic Linux Commands/</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+                                        <a href="#" class="logo"><strong>Basic Linux Commands   </strong> by Divyansh Bhardwaj <sub> August 20, 2018 </sub></a>
+                                        <!--<ul class="icons">
+                                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                                            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                                            <li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                                            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                            <li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+                                        </ul>-->
+                                    </header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Basic Linux Terminal Commands for Complete Beginners</h1>
+									</header>
+
+									<span class="image main"><img src="images/terminal.jpeg" alt="" /></span>
+
+									<p>
+                                        Hello, if you are looking at this page, you probably are interested in Linux terminal commands. You have come to the right place iff you are a beginner and want to experiment basic Linux commands.
+                                    </p>
+									<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>-->
+
+									<hr class="major" />
+
+									<h2>These are the Basic Linux Commands</h2>
+
+									<p>
+                                        To run these commands, you need to have a Linux terminal handy. These commands are mostly Linux specific, meaning that they run on an Linux platform. They are mostly same on all UNIX/LINUX platforms like Debian, Fedora, Kali Linux, Backtrack, Arch Linux, Kubuntu etc.
+                                    </p>
+									<p>
+                                        Just open a terminal with the shortcut Ctrl + Alt + T.
+                                    </p>
+
+									<hr class="major" />
+
+									<h2>pwd</h2>
+									<p>
+                                        When you first open the terminal, you are in the home directory of your user. To know which directory you are in, you can use the “pwd” command. It gives us the absolute path, which means the path that starts from the root. The root is the base of the Linux file system. It is denoted by a forward slash( / ). The user directory is usually something like "/home/username".
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$ pwd
+/home/student
+                                        </code>
+                                    </pre>
+
+                                    <hr class="major" />
+
+									<h2>ls</h2>
+									<p>
+                                        If you want to see the list of files on your UNIX or Linux system, use the 'ls' command.
+
+                                        It shows the files /directories in your current directory.
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$ ls
+                                        </code>
+                                    </pre>
+
+									<hr class="major" />
+
+									<h2>echo</h2>
+									<p>
+                                        The "echo" command helps us move some data, usually text into a file. For example, if you want to create a new text file or add to an already made text file, you just need to type in, “echo hello, my name is alok >> new.txt”. You do not need to separate the spaces by using the backward slash here, because we put in two triangular brackets when we finish what we need to write.
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$ echo "Hello"
+Hello
+                                        </code>
+                                    </pre>
+                                    <hr class="major" />
+
+									<h2>cat</h2>
+									<p>
+                                        Use the cat command to display the contents of a file. It is usually used to easily view programs.
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$  cat hello.c
+#include&lt;stdio.h&gt;
+main()
+{
+	printf("hello");
+}
+                                        </code>
+                                    </pre>
+
+                                    <hr class="major" />
+
+									<h2>nano, vi, jed</h2>
+									<p>
+                                        nano and vi are already installed text editors in the Linux command line. The nano command is a good text editor that denotes keywords with color and can recognize most languages. And vi is simpler than nano. You can create a new file or modify a file using this editor. For example, if you need to make a new file named "check.txt", you can create it by using the command “nano check.txt”. You can save your files after editing by using the sequence Ctrl+X, then Y (or N for no). In my experience, using nano for HTML editing doesn't seem as good, because of its color, so I recommend jed text editor. We will come to installing packages soon.
+                                    </p>
+
+                                    <hr class="major" />
+
+									<h2>sudo</h2>
+									<p>
+                                        A widely used command in the Linux command line, sudo stands for "SuperUser Do". So, if you want any command to be done with administrative or root privileges, you can use the sudo command. For example, if you want to edit a file like viz. alsa-base.conf, which needs root permissions, you can use the command – sudo nano alsa-base.conf. You can enter the root command line using the command “sudo bash”, then type in your user password. You can also use the command “su” to do this, but you need to set a root password before that. For that, you can use the command “sudo passwd”(not misspelled, it is passwd). Then type in the new root password.
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$ sudo -i
+[sudo] password for student:
+                                        </code>
+                                    </pre>
+
+                                    <hr class="major" />
+
+									<h2>mkdir &amp; rmdir</h2>
+									<p>
+                                         Use the mkdir command when you need to create a folder or a directory. For example, if you want to make a directory called “DIY”, then you can type “mkdir DIY”. Remember, as told before, if you want to create a directory named “DIY Hacking”, then you can type “mkdir DIY\ Hacking”. Use rmdir to delete a directory. But rmdir can only be used to delete an empty directory. To delete a directory containing files, use rm.
+                                    </p>mkdir
+                                    <pre>
+                                        <code>
+student@student:~$ mkdir code
+student@student:~$ ls
+code
+                                        </code>
+                                    </pre>
+
+                                    <hr class="major" />
+
+									<h2>rm</h2>
+									<p>
+                                         Use the rm command to delete files and directories. But rm cannot simply delete a directory. Use “rm -r” to delete a directory. In this case, it deletes both the folder and the files in it.
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$ rm -r code
+student@student:~$ ls
+                                        </code>
+                                    </pre>
+
+                                    <hr class="major" />
+
+									<h2>touch</h2>
+									<p>
+                                         The touch command is used to create a file. It can be anything, from an empty txt file to an empty zip file. For example, “touch new.txt”.
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$ touch code.c
+                                        </code>
+                                    </pre>
+
+                                    <hr class="major" />
+
+									<h2>man &amp; --help</h2>
+									<p>
+                                         To know more about a command and how to use it, use the man command. It shows the manual pages of the command. For example, “man cd” shows the manual pages of the cd command. Typing in the command name and the argument helps it show which ways the command can be used (e.g., cd –help).
+                                    </p>
+
+                                    <hr class="major" />
+
+									<h2>cp</h2>
+									<p>
+                                         Use the cp command to copy files through the command line. It takes two arguments: The first is the location of the file to be copied, the second is where to copy.
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$ cp hello.c ../hello.c
+                                        </code>
+                                    </pre>
+
+                                    <hr class="major" />
+
+									<h2>mv</h2>
+									<p>
+                                        Use the mv command to move files through the command line. We can also use the mv command to rename a file. For example, if we want to rename the file “text” to “new”, we can use “mv text new”. It takes the two arguments, just like the cp command.
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$ mv hello.c ../hello.c
+                                        </code>
+                                    </pre>
+
+                                    <hr class="major" />
+
+									<h2>Ctrl + L</h2>
+									<p>
+                                        Clear the terminal output.
+                                    </p>
+                                    <pre>
+                                        <code>
+student@student:~$
+                                        </code>
+                                    </pre>
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>-->
+
+							<!-- Menu -->
+								<nav id="menu">
+                                        <header class="major">
+                                            <h2>Menu</h2>
+                                        </header>
+                                        <ul>
+                                            <li><a href="c_getting_started.html">Getting Started with C</a></li>
+                                            <li><a href="basic_linux_commands.html">Basic Linux Commands</a></li>
+                                            <!--<li><a href="#">Elements</a></li>
+                                            <li>
+                                                <span class="opener">Submenu</span>
+                                                <ul>
+                                                    <li><a href="#">Lorem Dolor</a></li>
+                                                    <li><a href="#">Ipsum Adipiscing</a></li>
+                                                    <li><a href="#">Tempus Magna</a></li>
+                                                    <li><a href="#">Feugiat Veroeros</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Etiam Dolore</a></li>
+                                            <li><a href="#">Adipiscing</a></li>
+                                            <li>
+                                                <span class="opener">Another Submenu</span>
+                                                <ul>
+                                                    <li><a href="#">Lorem Dolor</a></li>
+                                                    <li><a href="#">Ipsum Adipiscing</a></li>
+                                                    <li><a href="#">Tempus Magna</a></li>
+                                                    <li><a href="#">Feugiat Veroeros</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Maximus Erat</a></li>
+                                            <li><a href="#">Sapien Mauris</a></li>
+                                            <li><a href="#">Amet Lacinia</a></li>-->
+                                        </ul>
+                                    </nav>
+
+							<!-- Section -->
+								<!--<section>
+									<header class="major">
+										<h2>Ante interdum</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>-->
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+                                            <h2>Get in touch</h2>
+                                        </header>
+                                        <p>
+                                            Please feel free to contact me regarding any query related to programming or computers that you have, I will try my best to answer it as soon as possible :)
+                                        </p>
+                                        <ul class="contact">
+                                            <li class="fa-envelope-o"><a href="mailto:divyansh.bhardwaj@gla.ac.in">divyansh.bhardwaj@gla.ac.in</a></li>
+                                            <li class="fa-phone">Phone number lena aur dena, paap hai!</li>
+                                            <li class="fa-home">/home/blaze</li>
+                                        </ul>
+                                    </section>
+
+                                <!-- Footer -->
+                                    <footer id="footer">
+                                        <p class="copyright">&copy; Divyansh Bhardwaj | Blaze 2018. All rights reserved.
+                                    </footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
