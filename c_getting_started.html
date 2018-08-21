@@ -24,7 +24,15 @@
                                     <header id="header">
                                         <a href="#" class="logo"><strong>Getting Started with C Programming</strong> by Divyansh Bhardwaj <sub> August 20, 2018 </sub></a>
                                         <!--<ul class="icons">
-                                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                                            <li>
+                                                <a href="#">
+                                                    <u>Home</u>
+                                                    <span class="label">Twitter</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="icon">&gt;</span>
+                                            </li>
                                             <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
                                             <li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
                                             <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
@@ -46,10 +54,21 @@
 
                                         <h2>List of things&#44; we are going to need&#58;</h2>
                                                                 <ol>
-                                                                    <li>A computer&#44; with an OS (operating system) installed &#40;Windows 7/8/10&#44; Ubuntu 12&#46;04/16&#46;04/18&#46;04&#44; any other OS is also welcome &#58;&#41;</li>
-                                                                    <li>A notepad program&#46; &#40;Windows&#45;Notepad&#44; Linux&#45;Gedit&#41;</li>
-                                                                    <li>A Terminal ( CLI &#40;Command Line Interface&#41; ) program &#40;Windows &#45; Comamnd Prompt &#91; Win + R &#45;> cmd &#93;&#44; Linux &#45; Terminal &#91; Ctrl + Alt + T &#93;</li>
-                                                                    <li>That&#39;s all&#33; :)</li>
+                                                                    <li>
+                                                                        A computer&#44; with an OS (operating system) installed &#40;Windows 7/8/10&#44; Ubuntu 12&#46;04/16&#46;04/18&#46;04&#44; any other OS is also welcome &#58;&#41;
+                                                                    </li>
+                                                                    <li>
+                                                                        A notepad program&#46; &#40;Windows&#45;Notepad&#44; Linux&#45;Gedit&#41;
+                                                                    </li>
+                                                                    <li>
+                                                                        A Terminal ( CLI &#40;Command Line Interface&#41; ) program &#40;Windows &#45; Comamnd Prompt &#91; Win + R &#45;> cmd &#93;&#44; Linux &#45; Terminal &#91; Ctrl + Alt + T &#93;
+                                                                    </li>
+                                                                    <li>
+                                                                        A compiler program.
+                                                                    </li>
+                                                                    <li>
+                                                                        That&#39;s all&#33; :)
+                                                                    </li>
                                                                     <!--<li>Felis dolore viverra.</li>-->
                                                                 </ol>
 
@@ -309,20 +328,26 @@ int main()
                                                                         The command for compiling the C code in Windows Command Prompt via GCC is
                                                                         <pre>
                                                                             <code>
-C: gcc hello.c -o hello.exe
+C: gcc hello.c
                                                                             </code>
                                                                         </pre>
-                                                                        This command will compile the C code and convert the C program to equivalent binary code. Please note, the binary code will be saved to the new file mentioned after the '-o' in the command. Like we have written -o hello.exe here, hence a file name hello.exe will be created that will contain all the binary code. We have to mention the '.exe' in Windows and not in Linux, because Windows' default file extension in .exe : Executable.
+                                                                        This command will compile the C code and convert the C program to equivalent binary code. If you like you can execute the command as 'gcc hello.c -o hello.exe'. Please note, the binary code will be saved to the new file mentioned after the '-o' in the command. Like we have written -o hello.exe here, hence a file name hello.exe will be created that will contain all the binary code. We have to mention the '.exe' in Windows and not in Linux, because Windows' default file extension in .exe : Executable.
                                                                     </li>
-                                                                    <span class="image fit"><img src="images/ss/windows_compile.png" alt="" /></span>
+                                                                    <!--TODO add images for instructions-->
                                                                     <li>
                                                                         The command for running the binary code in Windows Command Prompt via GCC is
                                                                         <pre>
                                                                             <code>
-C: hello.exe
+C: a.exe
                                                                             </code>
                                                                         </pre>
-                                                                        This command will call the file 'hello.exe' present in the same folder and run the binary code present in the file.
+                                                                        This command will call the file 'a.exe' present in the same folder and run the binary code present in the file. Please note that the compiler will name the output file 'a.exe' by default if you do not tell the compiler to give it another name. You can give another name for the output file by using '-o filename.exe' after the 'gcc' command ex -
+                                                                        <pre>
+                                                                            <code>
+C: gcc hello.c -o hello.exe
+                                                                            </code>
+                                                                        </pre>
+                                                                        This will save the file as hello.exe and you can run the file with the name hello.exe.
                                                                     </li>
                                                                     <li>
                                                                         If you have followed all the above steps properly, then the program output should be shown in the Windows Command Prompt
@@ -369,22 +394,21 @@ int main()
                                                                     <li>
                                                                         Now we just have to compile the program you just wrote in C. We call this process 'Compilation'. It is necessary to convert the C Code to the Equivalent Binary code that the computer can understand.
                                                                     </li>
-
-                                                                    <span class="image fit"><img src="images/ss/linux_compile.png" alt="" /></span>
+                                                                    <!--TODO add the image-->
                                                                     <li>
                                                                         The command for compiling the C code in Linux terminal via GCC is
                                                                         <pre>
                                                                             <code>
-student@student:~$ gcc hello.c -o hello
+student@student:~$ gcc hello.c
                                                                             </code>
                                                                         </pre>
-                                                                        This command will compile the C code and convert the C program to equivalent binary code. Please note, the binary code will be saved to the new file mentioned after the '-o' in the command. Like we have written -o hello here, hence a file name hello will be created that will contain all the binary code. We do not have to type the '.exe' like we have to do in Windows, Linux understands that a file with no extension is a binary file.
+                                                                        This command will compile the C code and convert the C program to equivalent binary code.You can also use '-o filename' after the 'gcc' command. Please note, the binary code will be saved to the new file mentioned after the '-o' in the command. Like we have written -o hello here, hence a file name hello will be created that will contain all the binary code. We do not have to type the '.exe' like we have to do in Windows, Linux understands that a file with no extension is a binary file.
                                                                     </li>
                                                                     <li>
                                                                         The command for running the binary code in Linux Terminal via GCC is
                                                                         <pre>
                                                                             <code>
-student@student:~$ ./hello.exe
+student@student:~$ ./hello
                                                                             </code>
                                                                         </pre>
                                                                         This command will call the file 'hello' present in the same folder and run the binary code present in the file.
@@ -418,8 +442,23 @@ student@student:~$ ./hello.exe
 										<h2>Menu</h2>
 									</header>
 									<ul>
+                                        <li>
+                                            <a href="index.html">
+                                                Home
+                                            </a>
+                                        </li>
 										<li><a href="c_getting_started.html">Getting Started with C</a></li>
                                             <li><a href="basic_linux_commands.html">Basic Linux Commands</a></li>
+                                        <li><a href="#">The GCC Compiler</a></li>
+                                        <li>
+                                                <span class="opener">Some Fun</span>
+                                                <ul>
+                                                    <li><a href="#">Funny Videos</a></li>
+                                                    <li><a href="#">Inspirational Videos</a></li>
+                                                    <!--<li><a href="#">Tempus Magna</a></li>
+                                                    <li><a href="#">Feugiat Veroeros</a></li>-->
+                                                </ul>
+                                            </li>
 									</ul>
 								</nav>
 
