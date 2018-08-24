@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<!--
+        Editorial by HTML5 UP, modified by Blaze
+        html5up.net | @ajlkn
+        Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+    <title>#3 18/August/22/Article/Programming/GCC Compiler/</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="#" class="logo"><strong>The GCC Compiler</strong> by Divyansh Bhardwaj <sub> August 22, 2018 </sub></a>
+                    <!--<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+									</ul>-->
+                </header>
+
+                <!-- Content -->
+                <section>
+                    <header class="main">
+                        <h1>The GCC Compiler</h1>
+                    </header>
+
+                    <div class="col-4"><span class="image fit"><img src="images/gnu_logo.png" alt="" /></span></div>
+
+                    <p>
+                        Hello learners! This page is all about the GCC Compiler. If you would like to read the official documentation on the GCC Compiler, you can view it <a href="https://gcc.gnu.org/">here.</a> If you want, you can download the compiler form this link <a href="https://gcc.gnu.org/install/binaries.html">here.</a>
+                    </p>
+                    <p>
+                        The GCC (GNU Compiler Collection) Compiler is a program that compiles the source code written in a programming language. Simply it converts instructions written in programming languages by a user into machine/binary language so that the computer can understand it. Originally it was written for compiling only C programs, but later on, support for other programming languages have since been added.
+                    </p>
+                    <p>
+                        The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages (libstdc++,...). GCC was originally written as the compiler for the GNU operating system. The GNU system was developed to be 100% free software, free in the sense that it respects the user's freedom.
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>Using GCC on the terminal</h2>
+                    <p>
+                        GCC runs right on the terminal of your Operating System (Windows, Linux, Unix, Mac). If you already have GCC installed on your system, just open up your terminal and type gcc to check it.
+                    </p>
+                    <pre>
+                                        <code>
+student@student:~$ gcc
+                                        </code>
+                                    </pre>
+                    <p>
+                        That's it! If your terminal says something like
+                    </p>
+                        <pre>
+                            <code>
+student@student:~$ gcc
+gcc: fatal error: no input files
+compilation terminated.
+                            </code>
+                        </pre>
+                    <p>
+                        then you're all set to write your programs and compile them in your terminal.
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>More about the GCC Compiler</h2>
+                    <p>
+                        If you would like to read more about the GCC Compiler, there is a very simple step. You can use this method even if you do not have an internet connection. Just open your terminal and write 'man gcc' and press enter. This command only works on a Linux based OS.
+                    </p>
+                    <pre>
+                        <code>
+blaze@AppDorks:~$ man gcc
+                        </code>
+                    </pre>
+                    <p>The terminal will show something like this.</p>
+                    <pre>
+                        <code>
+GCC(1)                             GNU                             GCC(1)
+
+NAME
+       gcc - GNU project C and C++ compiler
+
+SYNOPSIS
+       gcc [-c|-S|-E] [-std=standard]
+           [-g] [-pg] [-Olevel]
+           [-Wwarn...] [-Wpedantic]
+           [-Idir...] [-Ldir...]
+           [-Dmacro[=defn]...] [-Umacro]
+           [-foption...] [-mmachine-option...]
+           [-o outfile] [@file] infile...
+
+       Only the most useful options are listed here; see below for the
+       remainder.  g++ accepts mostly the same options as gcc.
+
+ Manual page gcc(1) line 1 (press h for help or q to quit)
+
+                        </code>
+                    </pre>
+                    <p>
+                        With this documentation, you can read advanced stuff about the gcc compiler and the options it provides you to compile a program.
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>Compiling A Simple Hello World C Program with GCC   </h2>
+                    <dl>
+                        <dd>
+                            <h4>On a Windows machine</h4>
+                            <ol>
+                                <li>Just open any notepad program or IDE of your choice.</li>
+                                <li>Write the "Hello, World" program in C, given below</li>
+                                <pre>
+                                                                        <code>
+#include&lt;stdio.h&gt;
+int main()
+{
+    printf("Hello, world!");
+    return 0;
+}
+                                                                        </code>
+                                                                   </pre>
+                                <li>Save the file as hello.c</li>
+                                <li>Open the command prompt</li>
+                                <li>Go to the diretory where your file is located</li>
+                                <li>Now type </li>
+                                <pre>
+                                    <code>
+student@student:~$ gcc hello.c -o hello.exe
+student@student:~$ hello.exe
+                                    </code>
+                                </pre>
+                                <li><strong>If the program runs on the command prompt as shows the output, then your gcc installation has been successful.</strong></li>
+                            </ol>
+                        </dd>
+                        <dd>
+                            <h4>On a Linux machine</h4>
+                            <ol>
+                                <li>Just open any notepad program or IDE of your choice.</li>
+                                <li>Write the "Hello, World" program in C, given below</li>
+                                <pre>
+                                                                        <code>
+#include&lt;stdio.h&gt;
+int main()
+{
+    printf("Hello, world!");
+    return 0;
+}
+                                                                        </code>
+                                                                   </pre>
+                                <li>Save the file as hello.c</li>
+                                <li>Open the terminal</li>
+                                <li>Go to the diretory where your file is located</li>
+                                <li>Now type </li>
+                                <pre>
+                                    <code>
+student@student:~$ gcc hello.c -o hello
+student@student:~$ hello
+                                    </code>
+                                </pre>
+                                <li><strong>If the program runs on the terminal as shows the output, then your gcc installation has been successful.</strong></li>
+                            </ol>
+                        </dd>
+                    </dl>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
+                    </p>
+
+                </section>
+
+                <section>
+                    <!-- Blockquote -->
+                    <h3>Quote:</h3>
+                    <blockquote>
+                        “Code is like humor. When you have to explain it, it’s bad.” – Cory House
+                    </blockquote>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Search -->
+                <!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>-->
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                                Home
+                                            </a>
+                        </li>
+                        <li><a href="c_getting_started.html">Getting Started with C</a></li>
+                        <li><a href="basic_linux_commands.html">Basic Linux Commands</a></li>
+                        <li><a href="gcc.html">The GCC Compiler</a></li>
+                        <li>
+                            <span class="opener">Some Fun</span>
+                            <ul>
+                                <li><a href="#">Funny Videos</a></li>
+                                <li><a href="#">Inspirational Videos</a></li>
+                                <!--<li><a href="#">Tempus Magna</a></li>
+                                                    <li><a href="#">Feugiat Veroeros</a></li>-->
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Related Articles</span>
+                            <ul>
+                                <li><a href="https://www.technotification.com/2018/08/maths-in-software-engineering.html">How Important Is Maths For Software Engineering?</a></li>
+                                <li><a href="#">Inspirational Videos</a></li>
+                                <!--<li><a href="#">Tempus Magna</a></li>
+                                                    <li><a href="#">Feugiat Veroeros</a></li>-->
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Downloads Section</span>
+                            <ul>
+                                <li><a href="https://www.ubuntu.com/download/desktop">Ubuntu 18.04 LTS</a></li>
+                                <li><a href="https://gcc.gnu.org/install/binaries.html">GCC Compiler</a></li>
+                                <li><a href="http://www.codeblocks.org/downloads/26">CodeBlocks IDE</a></li>
+                                <li><a href="https://play.google.com/store/apps/details?id=name.antonsmirnov.android.cppdroid">Android App for compiling C Programs</a></li>
+                                <!--<li><a href="#">Tempus Magna</a></li>
+                                                    <li><a href="#">Feugiat Veroeros</a></li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <!--<section>
+									<header class="major">
+										<h2>Ante interdum</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>-->
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>
+                        Please feel free to contact me regarding any query related to programming or computers that you have, I will try my best to answer it as soon as possible :)
+                    </p>
+                    <ul class="contact">
+                        <li class="fa-envelope-o"><a href="mailto:divyansh.bhardwaj@gla.ac.in">divyansh.bhardwaj@gla.ac.in</a></li>
+                        <li class="fa-phone">Phone number lena aur dena, paap hai!</li>
+                        <li class="fa-home">/home/blaze</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; 2018&#44; Divyansh Bhardwaj&#46; All rights reserved.
+                        <!--Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.--></p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
